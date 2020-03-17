@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="850.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.cc.corpapp.controller.PetsController">
+   <center>
+      <TableView fx:id="pets_list" editable="true" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+        <columns>
+            <TableColumn fx:id="name" prefWidth="144.0" text="name" />
+            <TableColumn fx:id="breed" prefWidth="75.0" text="breed" />
+            <TableColumn fx:id="weight" onEditCommit="#editWeight" prefWidth="114.0" text="weight" />
+            <TableColumn fx:id="birthday" prefWidth="166.0" text="birthday" />
+            <TableColumn fx:id="age_type" onEditCommit="#editAgeType" prefWidth="114.0" text="age type" />
+            <TableColumn fx:id="gender" prefWidth="120.0" text="gender" />
+            <TableColumn fx:id="breed_ref" onEditCommit="#editBreedRef" prefWidth="116.0" text="Breed Ref" />
+        </columns>
+      </TableView>
+   </center>
+</BorderPane>

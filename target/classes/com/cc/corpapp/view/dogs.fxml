@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="850.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.cc.corpapp.controller.DogsController">
+   <top>
+      <ButtonBar prefHeight="40.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+        <buttons>
+          <Button mnemonicParsing="false" onMouseClicked="#back" text="Back" />
+        </buttons>
+      </ButtonBar>
+   </top>
+   <center>
+      <TableView fx:id="dogs_list" editable="true" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+        <columns>
+          <TableColumn fx:id="id" prefWidth="112.0" text="id" />
+          <TableColumn fx:id="breed" prefWidth="157.0" text="breed" />
+            <TableColumn fx:id="weight" onEditCommit="#editWeight" prefWidth="179.0" text="weight" />
+            <TableColumn fx:id="product_weight" onEditCommit="#editProductWeight" prefWidth="181.0" text="product weight" />
+            <TableColumn fx:id="price" onEditCommit="#editPrice" prefWidth="220.0" text="price" />
+        </columns>
+      </TableView>
+   </center>
+   <bottom>
+      <Pane prefHeight="73.0" prefWidth="850.0" BorderPane.alignment="CENTER">
+         <children>
+            <TextField fx:id="new_breed_field" layoutX="14.0" layoutY="24.0" prefHeight="25.0" prefWidth="95.0" promptText="New breed" />
+            <TextField fx:id="new_price_field" layoutX="202.0" layoutY="24.0" prefHeight="25.0" prefWidth="106.0" promptText="price" />
+            <TextField fx:id="new_weight_field" layoutX="116.0" layoutY="24.0" prefHeight="25.0" prefWidth="75.0" promptText="weight" />
+            <Button layoutX="406.0" layoutY="24.0" mnemonicParsing="false" onMouseClicked="#addNewDog" text="Add" />
+            <Button layoutX="784.0" layoutY="24.0" mnemonicParsing="false" onMouseClicked="#delete" text="Delete" />
+            <TextField fx:id="search_breed_field" layoutX="456.0" layoutY="24.0" prefHeight="25.0" prefWidth="60.0" promptText="breed" />
+            <Button layoutX="525.0" layoutY="24.0" mnemonicParsing="false" onMouseClicked="#search" text="Search" />
+            <TextField fx:id="new_product_weight_field" layoutX="318.0" layoutY="24.0" prefHeight="25.0" prefWidth="81.0" promptText="prod weight" />
+         </children>
+      </Pane>
+   </bottom>
+</BorderPane>

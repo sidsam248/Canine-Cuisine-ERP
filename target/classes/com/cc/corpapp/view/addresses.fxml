@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="850.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.cc.corpapp.controller.AddressesController">
+   <center>
+      <TableView fx:id="addresses_list" editable="true" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+        <columns>
+            <TableColumn fx:id="name" prefWidth="84.0" text="name" />
+            <TableColumn fx:id="state" prefWidth="126.0" text="state" />
+            <TableColumn fx:id="pincode" onEditCommit="#editPincode" prefWidth="104.0" text="pincode" />
+            <TableColumn fx:id="city" onEditCommit="#editCity" prefWidth="141.0" text="city" />
+            <TableColumn fx:id="locality" onEditCommit="#editLocality" prefWidth="159.0" text="locality" />
+            <TableColumn fx:id="street_name" onEditCommit="#editStreetName" prefWidth="132.0" text="street name" />
+            <TableColumn fx:id="house_no" onEditCommit="#editHouseNo" prefWidth="103.0" text="house no" />
+        </columns>
+      </TableView>
+   </center>
+</BorderPane>

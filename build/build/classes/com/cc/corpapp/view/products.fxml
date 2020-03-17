@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="850.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.cc.corpapp.controller.ProductsController">
+   <top>
+      <ButtonBar prefHeight="40.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+        <buttons>
+          <Button mnemonicParsing="false" onMouseClicked="#back" text="Back" />
+        </buttons>
+      </ButtonBar>
+   </top>
+   <center>
+      <TableView fx:id="products_list" editable="true" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+        <columns>
+          <TableColumn fx:id="id" prefWidth="150.0" text="id" />
+          <TableColumn fx:id="category_id" minWidth="0.0" prefWidth="151.0" text="category id" />
+            <TableColumn fx:id="name" minWidth="0.0" onEditCommit="#editName" prefWidth="176.0" text="name" />
+            <TableColumn fx:id="age_type" minWidth="0.0" onEditCommit="#editAgeType" prefWidth="126.0" text="age type" />
+            <TableColumn fx:id="price" minWidth="0.0" onEditCommit="#editPrice" prefWidth="246.0" text="price" />
+        </columns>
+      </TableView>
+   </center>
+   <bottom>
+      <Pane prefHeight="66.0" prefWidth="850.0" BorderPane.alignment="CENTER">
+         <children>
+            <TextField fx:id="new_category_id_field" layoutX="14.0" layoutY="21.0" prefHeight="25.0" prefWidth="75.0" promptText="category_id" />
+            <TextField fx:id="new_name_field" layoutX="95.0" layoutY="21.0" prefHeight="25.0" prefWidth="82.0" promptText="name" />
+            <Button layoutX="416.0" layoutY="21.0" mnemonicParsing="false" onMouseClicked="#addNewProduct" text="Add" />
+            <TextField fx:id="new_price_field" layoutX="303.0" layoutY="21.0" prefHeight="25.0" prefWidth="101.0" promptText="price" />
+            <TextField fx:id="new_age_type_field" layoutX="184.0" layoutY="21.0" prefHeight="25.0" prefWidth="112.0" promptText="age type" />
+            <Button layoutX="770.0" layoutY="21.0" mnemonicParsing="false" onMouseClicked="#delete" text="Delete" />
+            <TextField fx:id="search_name_field" layoutX="559.0" layoutY="21.0" prefHeight="25.0" prefWidth="86.0" promptText="search name" />
+            <Button layoutX="652.0" layoutY="21.0" mnemonicParsing="false" onMouseClicked="#search" text="Search" />
+         </children>
+      </Pane>
+   </bottom>
+</BorderPane>

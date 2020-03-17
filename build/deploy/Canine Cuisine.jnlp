@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jnlp spec="1.0" xmlns:jfx="http://javafx.com" href="Canine Cuisine.jnlp">
+  <information>
+    <title>Canine Cuisine</title>
+    <vendor>CC</vendor>
+    <description>Canine Cuisine</description>
+    <offline-allowed/>
+  </information>
+  <resources>
+    <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
+    <jar href="libs\Canine Cuisine.jar" size="66757" download="eager" />
+    <jar href="libs\commons-codec-1.10.jar" size="284184" download="eager" />
+    <jar href="libs\commons-collections4-4.2.jar" size="752798" download="eager" />
+    <jar href="libs\commons-logging-1.2.jar" size="61829" download="eager" />
+    <jar href="libs\httpclient-4.5.6.jar" size="767140" download="eager" />
+    <jar href="libs\httpcore-4.4.10.jar" size="326356" download="eager" />
+    <jar href="libs\json-20180813.jar" size="64597" download="eager" />
+    <jar href="libs\poi-4.0.0.jar" size="2715721" download="eager" />
+  </resources>
+  <jfx:javafx-desc  width="0" height="0" main-class="com.cc.corpapp.Main"  name="Canine Cuisine" />
+  <update check="background"/>
+</jnlp>
